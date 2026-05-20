@@ -1,6 +1,6 @@
 ---
 theme: the-unnamed
-title: Organizing AI-native software delivery with Gastown
+title: DiliTrust TechDay - Organizing AI-native software delivery with Gastown
 titleTemplate: '%s'
 info: |
   Gastown organizes AI-native software delivery. Live implementation on Agreement Hub.
