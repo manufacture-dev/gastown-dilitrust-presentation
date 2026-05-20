@@ -212,7 +212,10 @@ The story: Gas Town starts from vibe-coding chaos, then adds city-like operating
     <span>Demo flow</span>
     <p>Start the demo loop: open Agreement Hub → show current state → ask the Mayor.<br />From here, each Live Signal marks what to observe next.</p>
   </div>
-  <a class="app-open-link" href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">Open app ↗</a>
+  <div class="demo-actions">
+    <button class="app-open-link" type="button" onclick="fetch('/gastown-dilitrust-presentation/prompts/gastown-demo-prompt.txt').then((response) => { if (!response.ok) throw new Error(`Prompt fetch failed: ${response.status}`); return response.text() }).then((prompt) => navigator.clipboard.writeText(prompt))">Copy prompt</button>
+    <a class="app-open-link" href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">Open app ↗</a>
+  </div>
 </div>
 
 <!--

@@ -1641,6 +1641,13 @@
   margin: 0.08rem 0 0;
 }
 
+.demo-actions {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.42rem;
+}
+
 .demo-flow--verification {
   bottom: 0.75rem;
 }
@@ -1698,6 +1705,7 @@
 .app-open-link {
   display: inline-flex;
   align-items: center;
+  appearance: none;
   flex: 0 0 auto;
   border: 1px solid rgba(255, 255, 255, 0.78);
   border-style: solid;

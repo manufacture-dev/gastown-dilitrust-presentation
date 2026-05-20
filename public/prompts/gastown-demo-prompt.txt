@@ -1,0 +1,52 @@
+I want to implement new features in the agreement_hub application. The shared context and use cases are in the docs folder.
+
+First, do not dispatch implementation work yet.
+
+Read the docs and inspect the app. Make the reasonable product, architecture, scope, sequencing, implementation, naming, file ownership, and merge-order decisions yourself using existing project patterns.
+
+Then present me with:
+- the use cases found;
+- the decisions made and why;
+- the dependency graph, with an ASCII diagram;
+- the proposed beads;
+- the proposed convoys and how each expands into concrete beads;
+- the expected execution and merge order;
+- the main merge/conflict risks;
+- the mock/offline demo mode plan so the final demo works without LLM access;
+- the verification plan.
+
+Do not ask me to validate routine design, UI, implementation, architecture, naming, file structure, library, sequencing, or ownership choices. Ask only for demo-scope, external dependency, data-loss, major cost/time, or unrecoverable conflict decisions.
+
+Delivery rules:
+- The goal is verified code on main, not activity or many branches.
+- A task is done only when merged on main and verified; a branch, MR, or merge wisp is not done.
+- Foundation/blocking work must merge before dependent feature work.
+- Convoys are orchestration containers, not implementation tasks. Expand each convoy into atomic beads before dispatch.
+- Dispatch only atomic, actionable beads with one owner, clear dependencies, expected files, and acceptance criteria.
+- Avoid parallel edits to shared integration files; assign them to one owner or a dedicated integration bead.
+- If a merge is rejected or conflicts, preserve the branch, keep/reopen the source bead, mark the convoy item blocked, rebase/retry against current main if safe, and do not count it complete.
+
+After presenting the plan, wait for my explicit GO.
+
+Once I say GO, execute autonomously:
+- create beads and convoys;
+- dispatch according to the dependency graph;
+- let Witness and Refinery operate normally;
+- submit work for merge only after the assigned task is complete, rebased on current main, and local verification passes;
+- merge only when the integration/review step accepts it, conflicts are resolved, and the result is verified on main;
+- give me a short state-of-your-eyes update every minute.
+
+Each update must summarize:
+- main/shipped state;
+- beads and convoys by status;
+- active polecats and assigned bead;
+- merge queue;
+- conflicts/blockers/recovery;
+- pending work;
+- any decision needed from me.
+
+If repeated conflicts or high context/usage happen, stop new dispatch and switch to stabilization: rebase, merge, verify, recover, and report truthfully.
+
+Before claiming completion, verify main directly: expected use cases are present, backend/frontend checks pass, rejected work is resolved or explicitly deferred, and convoys are complete only through merged child beads.
+
+Stop the feedback loop only when delivery is complete or explicitly frozen, then give a final recap with timeline, use case, bead, convoy, owner, branch, merge wisp, merged-on-main status, verification, shipped state, pending state, and remaining risks.
