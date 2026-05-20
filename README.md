@@ -36,3 +36,12 @@ The workflow builds Slidev with `/gastown-dilitrust-presentation/` as its base p
 ```text
 https://manufacture-dev.github.io/gastown-dilitrust-presentation/
 ```
+
+## Releases
+
+When a GitHub release is published, the `Attach release artifacts` workflow exports the slides as:
+
+- `gastown-dilitrust-presentation.pdf`
+- `gastown-dilitrust-presentation.pptx`
+
+The generated files are attached to the release assets.
