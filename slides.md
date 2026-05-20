@@ -837,8 +837,6 @@ This closes the conceptual loop with the exact five problems introduced earlier.
 
 ## Questions & discussion
 
-<p class="lede">Gastown as an AI-native software delivery organization.</p>
-
 <div class="question-block">
   <span>Example questions</span>
   <p>What does it cost to deliver a feature with Gastown?</p>
