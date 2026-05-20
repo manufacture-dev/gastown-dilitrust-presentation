@@ -16,11 +16,7 @@ The presentation covers:
 - a live Agreement Hub demo used as a realistic software delivery target;
 - how formulas can turn orchestration patterns into repeatable delivery playbooks.
 
-The published slides are available at:
-
-```text
-https://manufacture.dev/gastown-dilitrust-presentation
-```
+View the published slides at [manufacture.dev/gastown-dilitrust-presentation](https://manufacture.dev/gastown-dilitrust-presentation).
 
 ## Slidev
 
@@ -51,11 +47,7 @@ Before the first deployment, configure the repository on GitHub:
 2. Set `Build and deployment` > `Source` to `GitHub Actions`.
 3. Push to `main` or run the `Deploy slides to GitHub Pages` workflow manually.
 
-The workflow builds Slidev with `/gastown-dilitrust-presentation/` as its base path for the organization Pages URL:
-
-```text
-https://manufacture-dev.github.io/gastown-dilitrust-presentation/
-```
+The workflow builds Slidev with `/gastown-dilitrust-presentation/` as its base path so assets resolve correctly under the published route.
 
 ## Releases
 
