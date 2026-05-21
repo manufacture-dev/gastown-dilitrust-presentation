@@ -303,6 +303,7 @@ The bottleneck is not just model intelligence; it is coordination.
           <p><b>Beads</b> make work addressable.</p>
           <p><b>Convoys</b> track delivery streams.</p>
           <p><b>Witness & Refinery</b> keep execution observable.</p>
+          <p><b>Polecats</b> do the work.</p>
         </div>
       </div>
       <div class="organized-card organized-card--output">
@@ -319,6 +320,7 @@ The bottleneck is not just model intelligence; it is coordination.
       <li>Mayor separates planning from execution.</li>
       <li>Beads and convoys make work addressable and trackable.</li>
       <li>Witness and Refinery make supervision and convergence visible.</li>
+      <li>Polecats execute the work.</li>
     </ul>
     <div class="takeaway-box takeaway-box--inline">Scale comes from shared coordination, not bigger prompts.</div>
   </div>
