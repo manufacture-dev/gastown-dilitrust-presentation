@@ -3,10 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "slidev --open",
-    "build": "slidev build",
-    "export": "slidev export --format pdf --output gastown-dilitrust-presentation.pdf",
-    "export:pptx": "slidev export --format pptx --output gastown-dilitrust-presentation.pptx",
+    "dev": "node scripts/talk.mjs dev",
+    "build": "node scripts/talk.mjs build",
+    "build:all": "node scripts/talk.mjs build-all",
+    "export:pdf": "node scripts/talk.mjs export pdf",
+    "export:pptx": "node scripts/talk.mjs export pptx",
+    "talk:list": "node scripts/talk.mjs list",
     "format": "slidev format slides.md"
   },
   "dependencies": {
