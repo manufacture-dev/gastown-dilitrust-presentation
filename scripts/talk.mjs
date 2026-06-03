@@ -52,6 +52,38 @@ function envForTalk(talk) {
   }
 }
 
+function readLocalizedHeading(locale) {
+  const localePath = path.join(root, 'locales', `${locale}.yml`)
+  const localeContent = readFileSync(localePath, 'utf8')
+  const match = localeContent.match(/^title:\n(?:[^\S\r\n].*\n)*?[^\S\r\n]+heading:\s*(.+)$/m)
+
+  if (!match)
+    throw new Error(`Missing title.heading in locales/${locale}.yml`)
+
+  return match[1].replace(/^["']|["']$/g, '')
+}
+
+function yamlString(value) {
+  return JSON.stringify(value)
+}
+
+function documentTitleForTalk(talk) {
+  return `${talk.label} - ${readLocalizedHeading(talk.defaultLocale)} (${talk.defaultLocale})`
+}
+
+function generatedSlidesForTalk(talk) {
+  const source = readFileSync(path.join(root, 'slides.md'), 'utf8')
+  const title = documentTitleForTalk(talk)
+  const generated = source.replace(/^title:\s*.*$/m, `title: ${yamlString(title)}`)
+  const generatedPath = path.join(root, `.slides.generated.${talk.route}.md`)
+
+  if (generated === source)
+    throw new Error('Unable to replace title in slides.md frontmatter')
+
+  writeFileSync(generatedPath, generated, 'utf8')
+  return path.relative(root, generatedPath)
+}
+
 function splitArgs(args) {
   const separatorIndex = args.indexOf('--')
   if (separatorIndex === -1)
@@ -78,6 +110,10 @@ function runSlidev(args, talk) {
         reject(new Error(`Slidev exited with code ${code}`))
     })
   })
+}
+
+function runTalkSlidev(commandArgs, talk) {
+  return runSlidev(commandArgs(generatedSlidesForTalk(talk)), talk)
 }
 
 function exportName(talk, extension) {
@@ -262,8 +298,9 @@ async function main() {
     rmSync(path.join(root, 'dist'), { recursive: true, force: true })
 
     for (const talk of talks) {
-      await runSlidev([
+      await runTalkSlidev(entry => [
         'build',
+        entry,
         '--out',
         `dist/${talk.route}`,
         '--base',
@@ -271,15 +308,17 @@ async function main() {
       ], talk)
 
       await mkdir(path.join(root, 'dist', 'downloads'), { recursive: true })
-      await runSlidev([
+      await runTalkSlidev(entry => [
         'export',
+        entry,
         '--format',
         'pdf',
         '--output',
         path.join('dist', 'downloads', exportName(talk, 'pdf')),
       ], talk)
-      await runSlidev([
+      await runTalkSlidev(entry => [
         'export',
+        entry,
         '--format',
         'pptx',
         '--output',
@@ -295,14 +334,14 @@ async function main() {
   if (command === 'dev') {
     const { talkName, passthrough: slidevArgs } = parseTalkAndPassthrough(args, passthrough)
     const talk = resolveTalk(talkName)
-    await runSlidev(['--open', ...slidevArgs], talk)
+    await runTalkSlidev(entry => [entry, '--open', ...slidevArgs], talk)
     return
   }
 
   if (command === 'build') {
     const { talkName, passthrough: slidevArgs } = parseTalkAndPassthrough(args, passthrough)
     const talk = resolveTalk(talkName)
-    await runSlidev(['build', ...slidevArgs], talk)
+    await runTalkSlidev(entry => ['build', entry, ...slidevArgs], talk)
     return
   }
 
@@ -312,8 +351,9 @@ async function main() {
     const extension = outputFormat === 'pptx' ? 'pptx' : 'pdf'
     const output = exportName(talk, extension)
     await mkdir(path.join(root, 'exports'), { recursive: true })
-    await runSlidev([
+    await runTalkSlidev(entry => [
       'export',
+      entry,
       '--format',
       outputFormat,
       '--output',
