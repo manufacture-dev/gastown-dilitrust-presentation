@@ -42,17 +42,17 @@ npm run export:pdf
 npm run export:pptx
 ```
 
-- `npm run dev` starts the live presentation server for the default talk. The
-  default talk is the most recent one by `date` in `talks/*.json`.
+- `npm run dev` starts the live presentation server for the latest talk. The
+  latest talk is the most recent one by `date` in `talks/*.json`.
 - `npm run dev -- <route>` starts a specific talk instance.
-- `npm run dev -- --port 3034` starts the default talk on a specific port.
+- `npm run dev -- --port 3034` starts the latest talk on a specific port.
 - `npm run dev -- <route> --port 3034` starts a specific talk on a specific port.
-- `npm run build` creates the default talk static website in `dist/`.
+- `npm run build` creates the latest talk static website in `dist/`.
 - `npm run build -- <route>` creates a specific talk static website in `dist/`.
 - `npm run build:all` creates one route per configured talk in `dist/<route>/`
   and downloadable PDF/PPTX files in `dist/downloads/`.
-- `npm run export:pdf` renders the default talk PDF in `exports/`.
-- `npm run export:pptx` renders the default talk PowerPoint file in `exports/`.
+- `npm run export:pdf` renders the latest talk PDF in `exports/`.
+- `npm run export:pptx` renders the latest talk PowerPoint file in `exports/`.
 - `npm run export:pdf -- <route>` renders a specific talk PDF in `exports/`.
 - `npm run export:pptx -- <route>` renders a specific talk PowerPoint file in `exports/`.
 

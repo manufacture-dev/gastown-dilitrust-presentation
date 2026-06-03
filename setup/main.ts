@@ -16,7 +16,7 @@ const talkModules = import.meta.glob('../talks/*.json', {
   import: 'default',
 }) as Record<string, TalkConfig>
 
-function getDefaultTalk() {
+function getLatestTalk() {
   const [talk] = Object.values(talkModules)
     .sort((a, b) => b.date.localeCompare(a.date) || a.route.localeCompare(b.route))
 
@@ -26,13 +26,13 @@ function getDefaultTalk() {
   return talk
 }
 
-const defaultTalk = getDefaultTalk()
+const latestTalk = getLatestTalk()
 
 const talkConfig: TalkConfig = {
-  id: import.meta.env.VITE_TALK_ID || defaultTalk.id,
-  route: import.meta.env.VITE_TALK_ROUTE || defaultTalk.route,
-  date: import.meta.env.VITE_TALK_DATE || defaultTalk.date,
-  defaultLocale: import.meta.env.VITE_DEFAULT_LOCALE || defaultTalk.defaultLocale,
+  id: import.meta.env.VITE_TALK_ID || latestTalk.id,
+  route: import.meta.env.VITE_TALK_ROUTE || latestTalk.route,
+  date: import.meta.env.VITE_TALK_DATE || latestTalk.date,
+  defaultLocale: import.meta.env.VITE_DEFAULT_LOCALE || latestTalk.defaultLocale,
 }
 
 function capitalize(value: string) {

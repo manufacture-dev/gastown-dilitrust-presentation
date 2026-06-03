@@ -24,7 +24,7 @@ function readTalks() {
     .sort((a, b) => b.date.localeCompare(a.date) || a.route.localeCompare(b.route))
 }
 
-function getDefaultTalk() {
+function getLatestTalk() {
   const [talk] = readTalks()
   if (!talk)
     throw new Error('No talk definitions found in talks/*.json')
@@ -236,7 +236,7 @@ function writeLocalPreviewAliases(talks) {
 }
 
 function resolveTalk(routeOrId) {
-  return routeOrId ? findTalk(routeOrId) : getDefaultTalk()
+  return routeOrId ? findTalk(routeOrId) : getLatestTalk()
 }
 
 function parseTalkAndPassthrough(args, existingPassthrough = []) {
