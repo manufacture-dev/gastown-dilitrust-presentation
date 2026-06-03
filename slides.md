@@ -1,5 +1,7 @@
 ---
 theme: the-unnamed
+addons:
+  - slidev-addon-i18nb
 title: DiliTrust TechDay - Organizing AI-native software delivery with Gastown
 titleTemplate: '%s'
 info: |
@@ -12,21 +14,21 @@ transition: fade
 mdc: true
 ---
 
-# Organizing AI-native software delivery with Gastown
+# {{ $t("title.heading") }}
 
-<p class="lede">DiliTrust TechDay</p>
+<p class="lede">{{ $t("title.event") }}</p>
 
 <div class="title-meta">
-<div class="byline">Jean-Louis Rigau & Emmanuel Sciara</div>
+<div class="byline">{{ $t("title.byline") }}</div>
 
-<div class="event-date">Thursday, May 21, 2026</div>
+<div class="event-date">{{ $t("title.date") }}</div>
 </div>
 
 <div class="title-tags">
-  <span>#AI-native engineering</span>
-  <span>#Distributed delivery</span>
-  <span>#Agent orchestration</span>
-  <span>#Supervised execution</span>
+  <span>{{ $t("title.tags.ai_native") }}</span>
+  <span>{{ $t("title.tags.distributed") }}</span>
+  <span>{{ $t("title.tags.orchestration") }}</span>
+  <span>{{ $t("title.tags.supervised") }}</span>
 </div>
 
 <!--
@@ -36,7 +38,7 @@ This is not "AI coding faster"; it is how delivery gets organized when AI worker
 
 ---
 
-# Speakers
+# {{ $t("speakers.heading") }}
 
 <div class="speakers-slide">
   <article class="speaker-card">
@@ -44,11 +46,11 @@ This is not "AI coding faster"; it is how delivery gets organized when AI worker
       <img src="./public/images/speakers/jlrigau.jpg" alt="Jean-Louis Rigau" />
     </figure>
     <div>
-      <span>Speaker</span>
+      <span>{{ $t("speakers.role") }}</span>
       <h2>Jean-Louis Rigau</h2>
-      <p>Engineering and AI-native transformation advisor. Helps organizations modernize platforms, delivery practices, product operating models and agentic workflows.</p>
+      <p>{{ $t("speakers.jlrigau.bio") }}</p>
       <div class="speaker-link">
-        <img src="./public/images/speakers/jlrigau-linkedin-qr.png" alt="QR code for Jean-Louis Rigau LinkedIn profile" />
+        <img src="./public/images/speakers/jlrigau-linkedin-qr.png" :alt="$t('speakers.jlrigau.qr_alt')" />
         <a href="https://www.linkedin.com/in/jlrigau/" target="_blank" rel="noopener noreferrer">linkedin.com/in/jlrigau</a>
       </div>
     </div>
@@ -58,11 +60,11 @@ This is not "AI coding faster"; it is how delivery gets organized when AI worker
       <img src="./public/images/speakers/emmanuelsciara.jpg" alt="Emmanuel Sciara" />
     </figure>
     <div>
-      <span>Speaker</span>
+      <span>{{ $t("speakers.role") }}</span>
       <h2>Emmanuel Sciara</h2>
-      <p>Agent Lead and AI-native Engineer. Works on strategy, deployment and coaching of coding agents, with hands-on Claude Code and developer enablement.</p>
+      <p>{{ $t("speakers.emmanuelsciara.bio") }}</p>
       <div class="speaker-link">
-        <img src="./public/images/speakers/emmanuelsciara-linkedin-qr.png" alt="QR code for Emmanuel Sciara LinkedIn profile" />
+        <img src="./public/images/speakers/emmanuelsciara-linkedin-qr.png" :alt="$t('speakers.emmanuelsciara.qr_alt')" />
         <a href="https://www.linkedin.com/in/emmanuelsciara/" target="_blank" rel="noopener noreferrer">linkedin.com/in/emmanuelsciara</a>
       </div>
     </div>
@@ -76,30 +78,30 @@ Keep the slide simple: names, photos, and the angle each speaker brings to the s
 
 ---
 
-# The 8 stages of AI development practice
+# {{ $t("evolution.heading") }}
 
 <div class="evolution-slide">
   <div class="evolution-ladder">
-    <div><span>1</span><img src="./public/images/ai-evolution/stage-01.webp" alt="" /><p>Zero or near-zero AI</p></div>
-    <div><span>2</span><img src="./public/images/ai-evolution/stage-02.webp" alt="" /><p>IDE assistant with permissions</p></div>
-    <div><span>3</span><img src="./public/images/ai-evolution/stage-03.webp" alt="" /><p>IDE agent in YOLO mode</p></div>
-    <div><span>4</span><img src="./public/images/ai-evolution/stage-04.webp" alt="" /><p>Wide agent inside the IDE</p></div>
-    <div><span>5</span><img src="./public/images/ai-evolution/stage-05.webp" alt="" /><p>Single CLI coding agent</p></div>
-    <div><span>6</span><img src="./public/images/ai-evolution/stage-06.webp" alt="" /><p>Multi-agent CLI workflow</p></div>
-    <div><span>7</span><img src="./public/images/ai-evolution/stage-07.webp" alt="" /><p>10+ agents, hand-managed</p></div>
-    <div><span>8</span><img src="./public/images/ai-evolution/stage-08.webp" alt="" /><p>Building an orchestrator</p></div>
+    <div><span>1</span><img src="./public/images/ai-evolution/stage-01.webp" alt="" /><p>{{ $t("evolution.stages.zero") }}</p></div>
+    <div><span>2</span><img src="./public/images/ai-evolution/stage-02.webp" alt="" /><p>{{ $t("evolution.stages.ide_assistant") }}</p></div>
+    <div><span>3</span><img src="./public/images/ai-evolution/stage-03.webp" alt="" /><p>{{ $t("evolution.stages.yolo") }}</p></div>
+    <div><span>4</span><img src="./public/images/ai-evolution/stage-04.webp" alt="" /><p>{{ $t("evolution.stages.wide_ide") }}</p></div>
+    <div><span>5</span><img src="./public/images/ai-evolution/stage-05.webp" alt="" /><p>{{ $t("evolution.stages.cli_agent") }}</p></div>
+    <div><span>6</span><img src="./public/images/ai-evolution/stage-06.webp" alt="" /><p>{{ $t("evolution.stages.multi_cli") }}</p></div>
+    <div><span>7</span><img src="./public/images/ai-evolution/stage-07.webp" alt="" /><p>{{ $t("evolution.stages.hand_managed") }}</p></div>
+    <div><span>8</span><img src="./public/images/ai-evolution/stage-08.webp" alt="" /><p>{{ $t("evolution.stages.orchestrator") }}</p></div>
   </div>
   <div class="evolution-copy">
-    <span>Practice shift</span>
-    <p class="creator-lede">The shift is from asking an assistant to operating a delivery system.</p>
+    <span>{{ $t("evolution.copy_label") }}</span>
+    <p class="creator-lede">{{ $t("evolution.lede") }}</p>
     <ul>
-      <li>Early stages improve individual flow.</li>
-      <li>Middle stages increase throughput with CLI agents.</li>
-      <li>Late stages create a coordination problem.</li>
-      <li>Gastown appears when hand-management stops scaling.</li>
+      <li>{{ $t("evolution.bullets.early") }}</li>
+      <li>{{ $t("evolution.bullets.middle") }}</li>
+      <li>{{ $t("evolution.bullets.late") }}</li>
+      <li>{{ $t("evolution.bullets.gastown") }}</li>
     </ul>
   </div>
-  <div class="takeaway-box takeaway-box--inline evolution-takeaway">AI development evolves from individual assistance to organizational coordination.</div>
+  <div class="takeaway-box takeaway-box--inline evolution-takeaway">{{ $t("evolution.takeaway") }}</div>
 </div>
 
 <!--
@@ -114,29 +116,29 @@ Use this as the bridge from personal AI practice to organizational orchestration
 <div class="creator-slide">
   <figure class="creator-photo">
     <img src="./public/images/steve-yegge.jpg" alt="Steve Yegge" />
-    <figcaption>Photo: Bram Cymet, CC BY-NC 2.0</figcaption>
+    <figcaption>{{ $t("creator.photo_caption") }}</figcaption>
   </figure>
   <div class="creator-copy">
-    <span>From practice to organization</span>
-    <p class="creator-lede">Steve Yegge frames the shift from individual AI coding to AI-native software delivery.</p>
+    <span>{{ $t("creator.copy_label") }}</span>
+    <p class="creator-lede">{{ $t("creator.lede") }}</p>
     <div class="creator-bridge">
       <div>
         <strong><em><a href="https://itrevolution.com/product/vibe-coding-book/" target="_blank" rel="noopener noreferrer">Vibe Coding</a></em></strong>
-        <p>Production-grade software with AI coding agents.</p>
+        <p>{{ $t("creator.vibe.desc") }}</p>
       </div>
       <div>
         <strong><a href="https://github.com/gastownhall/gastown" target="_blank" rel="noopener noreferrer">Gastown</a></strong>
-        <p>An operating model for coordinating many agents around real repositories.</p>
+        <p>{{ $t("creator.gastown.desc") }}</p>
       </div>
       <div>
         <strong><a href="https://github.com/gastownhall/beads" target="_blank" rel="noopener noreferrer">Beads</a></strong>
-        <p>A Git-backed work ledger for agentic engineering workflows.</p>
+        <p>{{ $t("creator.beads.desc") }}</p>
       </div>
     </div>
   </div>
   <figure class="book-cover">
     <img src="./public/images/vibe-coding-cover.jpg" alt="Vibe Coding book cover" />
-    <figcaption>Cover source: IT Revolution / Simon &amp; Schuster</figcaption>
+    <figcaption>{{ $t("creator.cover_caption") }}</figcaption>
   </figure>
 </div>
 
@@ -147,38 +149,38 @@ Keep it short: creator, book, why it matters for the model.
 
 ---
 
-# Gastown: a town-shaped delivery system
+# {{ $t("gastown.heading") }}
 
 <div class="gastown-intro">
   <div class="town-map">
     <div class="town-node town-node--main">
       <span>Town</span>
-      <strong>Agent headquarters</strong>
-      <p>A separate operating space where orchestration, identity, mail, and work tracking live.</p>
+      <strong>{{ $t("gastown.town.strong") }}</strong>
+      <p>{{ $t("gastown.town.desc") }}</p>
     </div>
     <div class="town-rail"></div>
     <div class="town-node">
       <span>Mayor</span>
-      <strong>Chief of staff</strong>
-      <p>The front door: absorbs worker noise and turns intent into coordinated work.</p>
+      <strong>{{ $t("gastown.mayor.strong") }}</strong>
+      <p>{{ $t("gastown.mayor.desc") }}</p>
     </div>
     <div class="town-node">
       <span>Rigs</span>
-      <strong>Project factories</strong>
-      <p>Polecats, Crew, Witness and Refinery operate around real repositories.</p>
+      <strong>{{ $t("gastown.rigs.strong") }}</strong>
+      <p>{{ $t("gastown.rigs.desc") }}</p>
     </div>
   </div>
   <div class="gastown-copy">
-    <span>Town as operating model</span>
-    <p class="creator-lede">Gastown makes vibe coding operational without pretending the chaos disappears.</p>
+    <span>{{ $t("gastown.copy_label") }}</span>
+    <p class="creator-lede">{{ $t("gastown.lede") }}</p>
     <ul>
-      <li>Many coding agents become first-class workers with visible identities.</li>
-      <li>Beads provide the Git-backed ledger for work, memory, mail, and provenance.</li>
-      <li>Convoys track delivery streams; Polecats execute the work.</li>
-      <li>Witness and Refinery keep the system from turning into merge chaos.</li>
+      <li>{{ $t("gastown.bullets.identities") }}</li>
+      <li>{{ $t("gastown.bullets.beads") }}</li>
+      <li>{{ $t("gastown.bullets.convoys") }}</li>
+      <li>{{ $t("gastown.bullets.supervision") }}</li>
     </ul>
   </div>
-  <div class="takeaway-box takeaway-box--inline gastown-takeaway">Gastown turns agentic coding into observable, coordinated software delivery.</div>
+  <div class="takeaway-box takeaway-box--inline gastown-takeaway">{{ $t("gastown.takeaway") }}</div>
 </div>
 
 <!--
@@ -188,33 +190,33 @@ The story: Gas Town starts from vibe-coding chaos, then adds city-like operating
 
 ---
 
-# Demo application
+# {{ $t("demo.heading") }}
 
 <div class="app-layout">
   <div class="app-copy">
     <span>Agreement Hub</span>
-    <p>A CRUD Contract Lifecycle Management application used as a realistic delivery target.</p>
+    <p>{{ $t("demo.desc") }}</p>
     <ul>
-      <li>Stack: React/Vite frontend, Express/TypeScript backend, SQLite database.</li>
-      <li>Gastown works on a forked repository, so the demo starts from a clean baseline.</li>
-      <li>The demo is real: the outcome may differ from the initial plan.</li>
+      <li>{{ $t("demo.bullets.stack") }}</li>
+      <li>{{ $t("demo.bullets.baseline") }}</li>
+      <li>{{ $t("demo.bullets.real") }}</li>
     </ul>
   </div>
   <div class="app-shot">
     <div class="app-window">
-      <img src="./public/images/screenshots/agreement-hub-initial.png" alt="Agreement Hub initial state" />
+      <img src="./public/images/screenshots/agreement-hub-initial.png" :alt="$t('demo.image_alt')" />
     </div>
   </div>
 </div>
 
 <div class="demo-flow">
   <div class="demo-flow-copy">
-    <span>Demo flow</span>
-    <p>Start the demo loop: open Agreement Hub → show current state → ask the Mayor.<br />From here, each Live Signal marks what to observe next.</p>
+    <span>{{ $t("demo.flow_label") }}</span>
+    <p>{{ $t("demo.flow_start") }}<br />{{ $t("demo.flow_next") }}</p>
   </div>
   <div class="demo-actions">
     <CopyPromptButton />
-    <a class="app-open-link" href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">Open app ↗</a>
+    <a class="app-open-link" href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">{{ $t("demo.open_app") }}</a>
   </div>
 </div>
 
@@ -228,53 +230,53 @@ Contract: the deck explains, the terminal works, the app proves.
 
 ---
 
-# Why single-agent workflows break
+# {{ $t("break.heading") }}
 
 <div class="slide-frame slide-frame--balanced">
   <div class="diagram-panel wide">
     <div class="single-agent-map">
       <div class="single-agent-core">
-        <span>Single agent</span>
-        <strong>Great local assistant</strong>
-        <p>One context, one thread of execution, one working branch.</p>
+        <span>{{ $t("break.core.label") }}</span>
+        <strong>{{ $t("break.core.strong") }}</strong>
+        <p>{{ $t("break.core.desc") }}</p>
       </div>
       <div class="break-card">
         <span>01</span>
-        <strong>Context saturation</strong>
-        <p>Important constraints disappear as the session grows.</p>
+        <strong>{{ $t("break.cards.context.title") }}</strong>
+        <p>{{ $t("break.cards.context.desc") }}</p>
       </div>
       <div class="break-card">
         <span>02</span>
-        <strong>Sequential execution</strong>
-        <p>Throughput is bounded by one worker loop.</p>
+        <strong>{{ $t("break.cards.sequential.title") }}</strong>
+        <p>{{ $t("break.cards.sequential.desc") }}</p>
       </div>
       <div class="break-card">
         <span>03</span>
-        <strong>No coordination layer</strong>
-        <p>Dependencies and ownership stay implicit.</p>
+        <strong>{{ $t("break.cards.coordination.title") }}</strong>
+        <p>{{ $t("break.cards.coordination.desc") }}</p>
       </div>
       <div class="break-card">
         <span>04</span>
-        <strong>Merge pressure</strong>
-        <p>Parallel changes become hard to integrate safely.</p>
+        <strong>{{ $t("break.cards.merge.title") }}</strong>
+        <p>{{ $t("break.cards.merge.desc") }}</p>
       </div>
       <div class="break-card">
         <span>05</span>
-        <strong>No operational supervision</strong>
-        <p>Stuck work is difficult to observe and recover.</p>
+        <strong>{{ $t("break.cards.supervision.title") }}</strong>
+        <p>{{ $t("break.cards.supervision.desc") }}</p>
       </div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Problem</span>
-    <p>AI coding works locally, but software delivery is organizational.</p>
+    <span>{{ $t("break.panel_label") }}</span>
+    <p>{{ $t("break.panel_desc") }}</p>
     <ul>
-      <li>Context windows do not model dependencies.</li>
-      <li>Sequential work limits throughput.</li>
-      <li>Parallel work creates integration pressure.</li>
-      <li>Supervision becomes a first-class concern.</li>
+      <li>{{ $t("break.bullets.context") }}</li>
+      <li>{{ $t("break.bullets.sequential") }}</li>
+      <li>{{ $t("break.bullets.parallel") }}</li>
+      <li>{{ $t("break.bullets.supervision") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Software delivery is organizational. The bottleneck becomes coordination.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("break.takeaway") }}</div>
   </div>
 </div>
 
@@ -285,48 +287,48 @@ The bottleneck is not just model intelligence; it is coordination.
 
 ---
 
-# Gastown organizes work, not prompts
+# {{ $t("organizes.heading") }}
 
 <div class="slide-frame slide-frame--balanced">
   <div class="diagram-panel">
     <div class="organized-work-map">
       <div class="organized-card organized-card--input">
-        <span>Input</span>
-        <strong>Human intent</strong>
-        <p>Natural language request, incomplete by design.</p>
+        <span>{{ $t("organizes.input.label") }}</span>
+        <strong>{{ $t("organizes.input.strong") }}</strong>
+        <p>{{ $t("organizes.input.desc") }}</p>
       </div>
       <div class="organized-card organized-card--model">
-        <span>Organization layer</span>
-        <strong>Gastown structures delivery</strong>
+        <span>{{ $t("organizes.layer.label") }}</span>
+        <strong>{{ $t("organizes.layer.strong") }}</strong>
         <div class="organized-mechanisms">
-          <p><b>Mayor</b> plans and coordinates.</p>
-          <p><b>Beads</b> make work addressable.</p>
-          <p><b>Convoys</b> track delivery streams.</p>
-          <p><b>Witness & Refinery</b> keep execution observable.</p>
-          <p><b>Polecats</b> do the work.</p>
+          <p><b>Mayor</b> {{ $t("organizes.layer.mayor") }}</p>
+          <p><b>Beads</b> {{ $t("organizes.layer.beads") }}</p>
+          <p><b>Convoys</b> {{ $t("organizes.layer.convoys") }}</p>
+          <p><b>Witness & Refinery</b> {{ $t("organizes.layer.witness_refinery") }}</p>
+          <p><b>Polecats</b> {{ $t("organizes.layer.polecats") }}</p>
         </div>
       </div>
       <div class="organized-card organized-card--output">
-        <span>Output</span>
-        <strong>Observable delivery</strong>
-        <p>Status, dependencies, ownership, progress, and merge flow become inspectable.</p>
+        <span>{{ $t("organizes.output.label") }}</span>
+        <strong>{{ $t("organizes.output.strong") }}</strong>
+        <p>{{ $t("organizes.output.desc") }}</p>
       </div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Response</span>
-    <p>Gastown turns intent into shared delivery objects.</p>
+    <span>{{ $t("organizes.panel_label") }}</span>
+    <p>{{ $t("organizes.panel_desc") }}</p>
     <ul>
-      <li>Mayor separates planning from execution.</li>
-      <li>Beads and convoys make work addressable and trackable.</li>
-      <li>Witness and Refinery make supervision and convergence visible.</li>
-      <li>Polecats execute the work.</li>
+      <li>{{ $t("organizes.bullets.mayor") }}</li>
+      <li>{{ $t("organizes.bullets.beads") }}</li>
+      <li>{{ $t("organizes.bullets.witness") }}</li>
+      <li>{{ $t("organizes.bullets.polecats") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Scale comes from shared coordination, not bigger prompts.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("organizes.takeaway") }}</div>
   </div>
 </div>
 
-<div class="live-signal">The Mayor turns a high-level request into beads, convoys, assignments, and visible status.</div>
+<div class="live-signal">{{ $t("organizes.live_signal") }}</div>
 
 <!--
 Use this slide to position Gastown as an AI-native delivery organization.
@@ -335,7 +337,7 @@ Avoid tool tour language.
 
 ---
 
-# The Organization
+# {{ $t("organization.heading") }}
 
 <div class="slide-frame slide-frame--balanced">
   <div class="diagram-panel">
@@ -345,56 +347,56 @@ Avoid tool tour language.
         <div class="town-rig-row">
           <div>
             <strong>👁️ Overseer</strong>
-            <p>Human intent and control</p>
+            <p>{{ $t("organization.town.overseer") }}</p>
           </div>
           <div>
             <strong>🏛️ Mayor</strong>
-            <p>Cross-rig coordination</p>
+            <p>{{ $t("organization.town.mayor") }}</p>
           </div>
           <div>
             <strong>🐺 Deacon</strong>
-            <p>System health</p>
+            <p>{{ $t("organization.town.deacon") }}</p>
           </div>
         </div>
       </div>
       <div class="town-rig-band town-rig-band--rig">
         <span>Rig</span>
-        <p class="town-rig-definition">A project repository with its own execution environment.</p>
+        <p class="town-rig-definition">{{ $t("organization.rig.definition") }}</p>
         <div class="town-rig-row town-rig-row--rig">
           <div>
             <strong>👥 Crew</strong>
-            <p>Persistent workers</p>
+            <p>{{ $t("organization.rig.crew") }}</p>
           </div>
           <div>
             <strong>😺 Polecats</strong>
-            <p>Ephemeral workers</p>
+            <p>{{ $t("organization.rig.polecats") }}</p>
           </div>
           <div>
             <strong>🦉 Witness</strong>
-            <p>Rig supervision</p>
+            <p>{{ $t("organization.rig.witness") }}</p>
           </div>
           <div>
             <strong>🏭 Refinery</strong>
-            <p>Merge queue</p>
+            <p>{{ $t("organization.rig.refinery") }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Why it matters</span>
-    <p>Gastown is organized around a town and one or more rigs.</p>
+    <span>{{ $t("common.why_it_matters") }}</span>
+    <p>{{ $t("organization.panel_desc") }}</p>
     <ul>
-      <li>The Town coordinates across repositories.</li>
-      <li>Each Rig is attached to a real codebase.</li>
-      <li>Crew members are persistent; Polecats are disposable execution workers.</li>
-      <li>Witness and Refinery are rig-level operating roles.</li>
+      <li>{{ $t("organization.bullets.town") }}</li>
+      <li>{{ $t("organization.bullets.rig") }}</li>
+      <li>{{ $t("organization.bullets.workers") }}</li>
+      <li>{{ $t("organization.bullets.roles") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Gastown separates coordination, execution, supervision, and integration.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("organization.takeaway") }}</div>
   </div>
 </div>
 
-<div class="live-signal">Identify the rig, the persistent crew, and the disposable workers attached to the repository.</div>
+<div class="live-signal">{{ $t("organization.live_signal") }}</div>
 
 <!--
 This is a central slide. The key line is:
@@ -403,7 +405,7 @@ The Mayor coordinates work. Polecats execute it.
 
 ---
 
-# Beads: work breakdown & dependencies
+# {{ $t("beads.heading") }}
 
 <div class="slide-frame slide-frame--balanced slide-frame--beads">
   <div class="diagram-panel">
@@ -422,53 +424,53 @@ The Mayor coordinates work. Polecats execute it.
       <span class="bead-link bead-link--library-collector bead-link--soft"></span>
       <span class="bead-link bead-link--uc2-uc4 bead-link--critical"></span>
       <div class="bead-node bead-node--foundation bead-node--phase bead-node--critical-path">
-        <span>Phase 0 — Foundations</span>
-        <strong>Schema enrichment · RiskFinding type · LLM wrapper</strong>
+        <span>{{ $t("beads.nodes.foundation.label") }}</span>
+        <strong>{{ $t("beads.nodes.foundation.strong") }}</strong>
       </div>
       <div class="bead-node bead-node--use-case bead-node--uc5">
         <span>Use Case 5</span>
-        <strong>Clause Library</strong>
-        <em>Reusable templates</em>
+        <strong>{{ $t("beads.nodes.uc5.strong") }}</strong>
+        <em>{{ $t("beads.nodes.uc5.em") }}</em>
       </div>
       <div class="bead-node bead-node--use-case bead-node--uc3">
         <span>Use Case 3</span>
-        <strong>Approval Workflow</strong>
-        <em>State and history</em>
+        <strong>{{ $t("beads.nodes.uc3.strong") }}</strong>
+        <em>{{ $t("beads.nodes.uc3.em") }}</em>
       </div>
       <div class="bead-node bead-node--use-case bead-node--uc1">
         <span>Use Case 1</span>
-        <strong>Clause Generator</strong>
-        <em>Can save clauses</em>
+        <strong>{{ $t("beads.nodes.uc1.strong") }}</strong>
+        <em>{{ $t("beads.nodes.uc1.em") }}</em>
       </div>
       <div class="bead-node bead-node--use-case bead-node--uc2 bead-node--critical-path">
         <span>Use Case 2</span>
-        <strong>Risk Reviewer</strong>
-        <em>Persists findings</em>
+        <strong>{{ $t("beads.nodes.uc2.strong") }}</strong>
+        <em>{{ $t("beads.nodes.uc2.em") }}</em>
       </div>
-      <div class="bead-dependency-label bead-dependency-label--library">Saved generated clauses to library</div>
-      <div class="bead-dependency-label bead-dependency-label--risk">risky / GDPR facets need persisted findings</div>
+      <div class="bead-dependency-label bead-dependency-label--library">{{ $t("beads.dependencies.library") }}</div>
+      <div class="bead-dependency-label bead-dependency-label--risk">{{ $t("beads.dependencies.risk") }}</div>
       <div class="bead-node bead-node--blocked bead-node--uc4 bead-node--critical-path">
-        <span>Use Case 4 — last mile</span>
-        <strong>Search / Intelligence</strong>
-        <em>Uses schema, metadata, and risk findings</em>
+        <span>{{ $t("beads.nodes.uc4.label") }}</span>
+        <strong>{{ $t("beads.nodes.uc4.strong") }}</strong>
+        <em>{{ $t("beads.nodes.uc4.em") }}</em>
       </div>
-      <div class="bead-critical-legend">Critical path</div>
+      <div class="bead-critical-legend">{{ $t("beads.critical_path") }}</div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Why it matters</span>
-    <p>Beads turn a high-level request into executable work with order, ownership, and status.</p>
+    <span>{{ $t("common.why_it_matters") }}</span>
+    <p>{{ $t("beads.panel_desc") }}</p>
     <ul>
-      <li>Dependencies expose the critical path.</li>
-      <li>Ready work can be executed immediately.</li>
-      <li>Blocked work is visible instead of implicit.</li>
-      <li>Hooks keep workers connected to active assignments.</li>
+      <li>{{ $t("beads.bullets.dependencies") }}</li>
+      <li>{{ $t("beads.bullets.ready") }}</li>
+      <li>{{ $t("beads.bullets.blocked") }}</li>
+      <li>{{ $t("beads.bullets.hooks") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Beads expose what can start now, what is blocked, and why.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("beads.takeaway") }}</div>
   </div>
 </div>
 
-<div class="live-signal">Bead creation, ready/blocked status, dependency graph, and current hook.</div>
+<div class="live-signal">{{ $t("beads.live_signal") }}</div>
 
 <!--
 Use this slide to explain why dependency management matters.
@@ -477,64 +479,64 @@ The important point: work becomes executable and inspectable.
 
 ---
 
-# Convoys: delivery streams
+# {{ $t("convoys.heading") }}
 
 <div class="slide-frame slide-frame--compact slide-frame--convoys">
   <div class="diagram-panel diagram-panel--tall">
     <div class="convoy-map">
       <div class="convoy-row convoy-row--phase">
-        <b class="convoy-step">Step 0</b>
-        <span>🚚 Phase 0 convoy</span>
-        <strong>Foundations</strong>
-        <em>shared base · unlocks Use Cases 1-5</em>
+        <b class="convoy-step">{{ $t("convoys.steps.step0") }}</b>
+        <span>{{ $t("convoys.phase.label") }}</span>
+        <strong>{{ $t("convoys.phase.strong") }}</strong>
+        <em>{{ $t("convoys.phase.em") }}</em>
       </div>
       <div class="convoy-grid">
         <div class="convoy-row">
-          <b class="convoy-step">Step 1</b>
-          <span>🚚 Use Case 5 convoy</span>
-          <strong>Clause Library</strong>
-          <em>CRUD stream · reusable clauses</em>
+          <b class="convoy-step">{{ $t("convoys.steps.step1") }}</b>
+          <span>{{ $t("convoys.uc5.label") }}</span>
+          <strong>{{ $t("convoys.uc5.strong") }}</strong>
+          <em>{{ $t("convoys.uc5.em") }}</em>
         </div>
         <div class="convoy-row">
-          <b class="convoy-step">Step 1</b>
-          <span>🚚 Use Case 3 convoy</span>
-          <strong>Approval Workflow</strong>
-          <em>state machine · history</em>
+          <b class="convoy-step">{{ $t("convoys.steps.step1") }}</b>
+          <span>{{ $t("convoys.uc3.label") }}</span>
+          <strong>{{ $t("convoys.uc3.strong") }}</strong>
+          <em>{{ $t("convoys.uc3.em") }}</em>
         </div>
         <div class="convoy-row">
-          <b class="convoy-step">Step 2</b>
-          <span>🚚 Use Case 1 convoy</span>
-          <strong>Clause Generator</strong>
-          <em>AI stream · saves to library</em>
+          <b class="convoy-step">{{ $t("convoys.steps.step2") }}</b>
+          <span>{{ $t("convoys.uc1.label") }}</span>
+          <strong>{{ $t("convoys.uc1.strong") }}</strong>
+          <em>{{ $t("convoys.uc1.em") }}</em>
         </div>
         <div class="convoy-row">
-          <b class="convoy-step">Step 2</b>
-          <span>🚚 Use Case 2 convoy</span>
-          <strong>Risk Reviewer</strong>
-          <em>AI stream · persisted findings</em>
+          <b class="convoy-step">{{ $t("convoys.steps.step2") }}</b>
+          <span>{{ $t("convoys.uc2.label") }}</span>
+          <strong>{{ $t("convoys.uc2.strong") }}</strong>
+          <em>{{ $t("convoys.uc2.em") }}</em>
         </div>
         <div class="convoy-row convoy-row--wide">
-          <b class="convoy-step">Step 3</b>
-          <span>🚚 Use Case 4 convoy</span>
-          <strong>Search / Intelligence</strong>
-          <em>last mile · depends on schema and risk findings</em>
+          <b class="convoy-step">{{ $t("convoys.steps.step3") }}</b>
+          <span>{{ $t("convoys.uc4.label") }}</span>
+          <strong>{{ $t("convoys.uc4.strong") }}</strong>
+          <em>{{ $t("convoys.uc4.em") }}</em>
         </div>
       </div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Why it matters</span>
-    <p>Convoys make each use case visible as a delivery stream.</p>
+    <span>{{ $t("common.why_it_matters") }}</span>
+    <p>{{ $t("convoys.panel_desc") }}</p>
     <ul>
-      <li>Same step number means parallel work.</li>
-      <li>Progress becomes visible across workers.</li>
-      <li>Shared reference across roles.</li>
+      <li>{{ $t("convoys.bullets.step") }}</li>
+      <li>{{ $t("convoys.bullets.progress") }}</li>
+      <li>{{ $t("convoys.bullets.reference") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Convoys turn the bead graph into observable delivery streams.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("convoys.takeaway") }}</div>
   </div>
 </div>
 
-<div class="live-signal">Convoy creation, convoy status, and landing notification.</div>
+<div class="live-signal">{{ $t("convoys.live_signal") }}</div>
 
 <!--
 Convoys should feel operational, not decorative.
@@ -543,7 +545,7 @@ They are the shared handle for distributed delivery.
 
 ---
 
-# Polecats: parallel execution
+# {{ $t("polecats.heading") }}
 
 <div class="slide-frame slide-frame--polecats">
   <div class="diagram-panel wide">
@@ -557,7 +559,7 @@ They are the shared handle for distributed delivery.
           <span>😺 furiosa</span>
         </div>
         <div class="polecat-delivery">
-          <p>Foundations<br>Clause Library<br>Risk Reviewer</p>
+          <p>{{ $t("polecats.assignments.furiosa_1") }}<br>{{ $t("polecats.assignments.furiosa_2") }}<br>{{ $t("polecats.assignments.furiosa_3") }}</p>
         </div>
       </div>
       <div class="polecat-row">
@@ -565,7 +567,7 @@ They are the shared handle for distributed delivery.
           <span>😺 nux</span>
         </div>
         <div class="polecat-delivery">
-          <p>Contract Approval Workflow</p>
+          <p>{{ $t("polecats.assignments.nux") }}</p>
         </div>
       </div>
       <div class="polecat-row">
@@ -573,34 +575,34 @@ They are the shared handle for distributed delivery.
           <span>😺 slit</span>
         </div>
         <div class="polecat-delivery">
-          <p>Clause Generator<br>Search / Intelligence MVP</p>
+          <p>{{ $t("polecats.assignments.slit_1") }}<br>{{ $t("polecats.assignments.slit_2") }}</p>
         </div>
       </div>
       <div class="polecat-note">
-        <span>One product request</span>
+        <span>{{ $t("polecats.flow.request") }}</span>
         <i>↓</i>
-        <span>Scoped beads</span>
+        <span>{{ $t("polecats.flow.beads") }}</span>
         <i>↓</i>
-        <span>Isolated execution workers (Polecats)</span>
+        <span>{{ $t("polecats.flow.workers") }}</span>
         <i>↓</i>
-        <span>Coordinated delivery</span>
+        <span>{{ $t("polecats.flow.delivery") }}</span>
       </div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Why it matters</span>
-    <p>The Mayor assigns scoped beads to Polecats, each running in its own context and branch.</p>
+    <span>{{ $t("common.why_it_matters") }}</span>
+    <p>{{ $t("polecats.panel_desc") }}</p>
     <ul>
-      <li>Spawned on demand for discrete tasks.</li>
-      <li>Assignments stay isolated from each other.</li>
-      <li>Polecats disappear after delivery.</li>
-      <li>Parallelism increases throughput, not chaos.</li>
+      <li>{{ $t("polecats.bullets.spawned") }}</li>
+      <li>{{ $t("polecats.bullets.isolated") }}</li>
+      <li>{{ $t("polecats.bullets.disappear") }}</li>
+      <li>{{ $t("polecats.bullets.parallelism") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Polecats make execution scalable by distributing work across isolated contexts.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("polecats.takeaway") }}</div>
   </div>
 </div>
 
-<div class="live-signal">Multiple Polecats, branches, commits, and delivery statuses running at the same time.</div>
+<div class="live-signal">{{ $t("polecats.live_signal") }}</div>
 
 <!--
 This is the "wow" moment, but keep it engineering-oriented.
@@ -609,67 +611,67 @@ The claim is throughput through isolated execution.
 
 ---
 
-# Supervision keeps execution operational
+# {{ $t("supervision.heading") }}
 
 <div class="slide-frame slide-frame--balanced">
   <div class="diagram-panel">
       <div class="supervision-map">
-      <div class="supervision-layer-label">HQ watchdog chain</div>
+      <div class="supervision-layer-label">{{ $t("supervision.hq_label") }}</div>
       <div class="supervision-side-role supervision-side-role--mayor">
         <strong>🏛️ Mayor</strong>
-        <p>Coordinates work</p>
+        <p>{{ $t("supervision.mayor") }}</p>
       </div>
       <div class="supervision-card supervision-card--deacon">
         <strong>🐺 Deacon</strong>
-        <p>Town watchdog · lifecycle · recovery</p>
+        <p>{{ $t("supervision.deacon") }}</p>
       </div>
-      <div class="supervision-daemon">⚙️ Daemon<br><small>mechanical heartbeat</small></div>
+      <div class="supervision-daemon">⚙️ Daemon<br><small>{{ $t("supervision.daemon") }}</small></div>
       <div class="supervision-hq-support">
         <div class="supervision-card supervision-card--boot">
           <strong>🐕 Boot the Dog</strong>
-          <p>Checks Deacon health</p>
+          <p>{{ $t("supervision.boot") }}</p>
         </div>
         <div class="supervision-card supervision-card--dogs">
           <strong>🐶 Dogs</strong>
-          <p>Deacon helpers</p>
+          <p>{{ $t("supervision.dogs") }}</p>
         </div>
       </div>
       <div class="supervision-section-gap"></div>
-      <div class="supervision-layer-label">Rig operational loop</div>
+      <div class="supervision-layer-label">{{ $t("supervision.rig_label") }}</div>
       <div class="supervision-side-role supervision-side-role--crew">
         <strong>👥 Crew</strong>
-        <p>Persistent workers</p>
+        <p>{{ $t("supervision.crew") }}</p>
       </div>
       <div class="supervision-card supervision-card--witness">
         <strong>🦉 Witness</strong>
-        <p>Monitors Polecats · detects stuck work · nudges recovery</p>
+        <p>{{ $t("supervision.witness") }}</p>
       </div>
       <div class="supervision-split">
         <div>
           <strong>😺 Polecats</strong>
-          <p>Execute beads</p>
+          <p>{{ $t("supervision.polecats") }}</p>
         </div>
         <div>
           <strong>🏭 Refinery</strong>
-          <p>Merge queue · delivery convergence</p>
+          <p>{{ $t("supervision.refinery") }}</p>
         </div>
       </div>
     </div>
   </div>
   <div class="insight-panel">
-    <span>Why it matters</span>
-    <p>Gastown supervision is layered, not a single watcher.</p>
+    <span>{{ $t("common.why_it_matters") }}</span>
+    <p>{{ $t("supervision.panel_desc") }}</p>
     <ul>
-      <li>Daemon wakes Boot when health needs checking.</li>
-      <li>Deacon keeps the town healthy.</li>
-      <li>Witness keeps rig execution moving.</li>
-      <li>Refinery keeps delivery converging.</li>
+      <li>{{ $t("supervision.bullets.daemon") }}</li>
+      <li>{{ $t("supervision.bullets.deacon") }}</li>
+      <li>{{ $t("supervision.bullets.witness") }}</li>
+      <li>{{ $t("supervision.bullets.refinery") }}</li>
     </ul>
-    <div class="takeaway-box takeaway-box--inline">Supervision turns distributed execution into an operational system.</div>
+    <div class="takeaway-box takeaway-box--inline">{{ $t("supervision.takeaway") }}</div>
   </div>
 </div>
 
-<div class="live-signal">Deacon health, Witness status, Polecat recovery, Refinery queue, and delivery convergence.</div>
+<div class="live-signal">{{ $t("supervision.live_signal") }}</div>
 
 <!--
 Important for DiliTrust: supervision and control are not optional.
@@ -678,35 +680,35 @@ This slide turns distributed execution into an operational system.
 
 ---
 
-# Agreement Hub verification
+# {{ $t("verification.heading") }}
 
 <div class="app-layout app-layout--verification">
   <div class="app-copy">
-    <span>Local inspection</span>
-    <p>We inspect the delivered repository by running Agreement Hub locally and comparing it with the starting version.</p>
+    <span>{{ $t("verification.copy_label") }}</span>
+    <p>{{ $t("verification.desc") }}</p>
     <ul>
-      <li>The app is not deployed during the demo.</li>
-      <li>We clone the complete repository produced by Gastown.</li>
-      <li>We run that repository locally, then compare it with the baseline app.</li>
+      <li>{{ $t("verification.bullets.not_deployed") }}</li>
+      <li>{{ $t("verification.bullets.clone") }}</li>
+      <li>{{ $t("verification.bullets.run") }}</li>
     </ul>
-    <p class="inspection-question">What will the delivered app reveal?</p>
+    <p class="inspection-question">{{ $t("verification.question") }}</p>
   </div>
   <div class="checkpoint-list">
-    <strong>Implemented use cases</strong>
-    <span class="is-checked">Clause Generator <i></i></span>
-    <span class="is-checked">Risk Reviewer <i></i></span>
-    <span>Approval Workflow <i></i></span>
-    <span>Search & Intelligence <i></i></span>
-    <span>Clause Library <i></i></span>
+    <strong>{{ $t("verification.checkpoints.title") }}</strong>
+    <span class="is-checked">{{ $t("verification.checkpoints.clause_generator") }} <i></i></span>
+    <span class="is-checked">{{ $t("verification.checkpoints.risk_reviewer") }} <i></i></span>
+    <span>{{ $t("verification.checkpoints.approval_workflow") }} <i></i></span>
+    <span>{{ $t("verification.checkpoints.search") }} <i></i></span>
+    <span>{{ $t("verification.checkpoints.library") }} <i></i></span>
   </div>
 </div>
 
 <div class="demo-flow demo-flow--verification">
   <div class="demo-flow-copy">
-    <span>Verification checkpoint</span>
-    <p>The Gastown delivery loop pauses here.<br />Now we clone the delivered repository, run Agreement Hub locally, and compare it with the starting application.</p>
+    <span>{{ $t("verification.flow_label") }}</span>
+    <p>{{ $t("verification.flow_start") }}<br />{{ $t("verification.flow_next") }}</p>
   </div>
-  <a class="app-open-link" href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">Open app ↗</a>
+  <a class="app-open-link" href="http://localhost:5173/" target="_blank" rel="noopener noreferrer">{{ $t("demo.open_app") }}</a>
 </div>
 
 <!--
@@ -716,58 +718,58 @@ The audience must see that Agreement Hub changed because Gastown delivered code.
 
 ---
 
-# Going further with formulas
+# {{ $t("formulas.heading") }}
 
 <div class="formula-slide">
   <div class="formula-left">
     <div class="formula-intro">
       <span>Formula</span>
-      <p>A formula turns an orchestration pattern into a repeatable delivery playbook: steps, inputs, gates, parallel work, and artifacts.</p>
+      <p>{{ $t("formulas.intro") }}</p>
     </div>
     <div class="formula-example">
-      <h2>Example</h2>
+      <h2>{{ $t("formulas.example_label") }}</h2>
       <strong>mol-idea-to-plan</strong>
-      <p>From vague idea to reviewed plan and work ready to become beads.</p>
-      <a href="https://github.com/gastownhall/gastown/blob/v1.1.0/internal/formula/formulas/mol-idea-to-plan.formula.toml" target="_blank" rel="noopener noreferrer">Open formula on GitHub</a>
+      <p>{{ $t("formulas.example_desc") }}</p>
+      <a href="https://github.com/gastownhall/gastown/blob/v1.1.0/internal/formula/formulas/mol-idea-to-plan.formula.toml" target="_blank" rel="noopener noreferrer">{{ $t("formulas.open_link") }}</a>
     </div>
-    <div class="takeaway-box takeaway-box--inline formula-takeaway">Formulas make orchestration reusable: the workflow becomes part of the delivery system.</div>
+    <div class="takeaway-box takeaway-box--inline formula-takeaway">{{ $t("formulas.takeaway") }}</div>
   </div>
   <div class="formula-workflow">
     <div class="formula-step formula-workflow--human">
-      <span>01 · You → Crew</span>
-      <p>Describe your idea in natural language; no structure needed.</p>
+      <span>{{ $t("formulas.steps.idea.label") }}</span>
+      <p>{{ $t("formulas.steps.idea.desc") }}</p>
     </div>
     <div class="formula-step">
-      <span>02 · intake</span>
-      <p>Agent structures it into a draft PRD.</p>
+      <span>{{ $t("formulas.steps.intake.label") }}</span>
+      <p>{{ $t("formulas.steps.intake.desc") }}</p>
     </div>
     <div class="formula-step formula-workflow--parallel">
-      <span>03 · prd-review</span>
-      <p>6 polecats review PRD in parallel: requirements, gaps, ambiguity, feasibility, scope and stakeholders.</p>
+      <span>{{ $t("formulas.steps.prd_review.label") }}</span>
+      <p>{{ $t("formulas.steps.prd_review.desc") }}</p>
     </div>
     <div class="formula-step formula-workflow--human">
-      <span>04 · human-clarify</span>
-      <p>Agent presents consolidated questions; the human answers before planning continues.</p>
+      <span>{{ $t("formulas.steps.human_clarify.label") }}</span>
+      <p>{{ $t("formulas.steps.human_clarify.desc") }}</p>
     </div>
     <div class="formula-step formula-workflow--parallel">
-      <span>05 · generate-plan</span>
-      <p>6 polecats design the implementation in parallel: API, data, UX, scale, security and integration.</p>
+      <span>{{ $t("formulas.steps.generate_plan.label") }}</span>
+      <p>{{ $t("formulas.steps.generate_plan.desc") }}</p>
     </div>
     <div class="formula-step">
-      <span>06 · prd-align 1-3</span>
-      <p>3 rounds × 2 Polecats align plan with PRD and apply fixes each round.</p>
+      <span>{{ $t("formulas.steps.prd_align.label") }}</span>
+      <p>{{ $t("formulas.steps.prd_align.desc") }}</p>
     </div>
     <div class="formula-step">
-      <span>07 · plan-review 1-3</span>
-      <p>3 rounds × 2 Polecats review the plan itself: completeness, sequencing, risk, scope creep, testability and coherence.</p>
+      <span>{{ $t("formulas.steps.plan_review.label") }}</span>
+      <p>{{ $t("formulas.steps.plan_review.desc") }}</p>
     </div>
     <div class="formula-step">
-      <span>08 · create-beads</span>
-      <p>Agent converts the refined plan into beads with dependencies.</p>
+      <span>{{ $t("formulas.steps.create_beads.label") }}</span>
+      <p>{{ $t("formulas.steps.create_beads.desc") }}</p>
     </div>
     <div class="formula-step">
-      <span>09 · verify-beads</span>
-      <p>3 sequential passes compare plan to beads and fill gaps.</p>
+      <span>{{ $t("formulas.steps.verify_beads.label") }}</span>
+      <p>{{ $t("formulas.steps.verify_beads.desc") }}</p>
     </div>
   </div>
 </div>
@@ -779,59 +781,59 @@ The mol-idea-to-plan formula is the concrete example: vague idea to reviewed pla
 
 ---
 
-# What Gastown changed
+# {{ $t("synthesis.heading") }}
 
 <div class="synthesis-flow">
   <div class="synthesis-head">
     <div>
-      <span>Problem</span>
-      <strong>Single-agent workflows break when coding becomes delivery.</strong>
+      <span>{{ $t("synthesis.problem_label") }}</span>
+      <strong>{{ $t("synthesis.problem") }}</strong>
     </div>
     <div>
-      <span>Gastown response</span>
-      <strong>Turn delivery into a supervised, distributed operating model.</strong>
+      <span>{{ $t("synthesis.response_label") }}</span>
+      <strong>{{ $t("synthesis.response") }}</strong>
     </div>
   </div>
 
   <div class="synthesis-row">
     <span>01</span>
     <div class="synthesis-problem">
-      <strong>Context saturation</strong>
-      <p>Important constraints disappear as the session grows.</p>
+      <strong>{{ $t("break.cards.context.title") }}</strong>
+      <p>{{ $t("break.cards.context.desc") }}</p>
     </div>
-    <em>Structure work into beads, artifacts, and explicit handoffs.</em>
+    <em>{{ $t("synthesis.rows.context") }}</em>
   </div>
   <div class="synthesis-row">
     <span>02</span>
     <div class="synthesis-problem">
-      <strong>Sequential execution</strong>
-      <p>Throughput is bounded by one worker loop.</p>
+      <strong>{{ $t("break.cards.sequential.title") }}</strong>
+      <p>{{ $t("break.cards.sequential.desc") }}</p>
     </div>
-    <em>Use Polecats to execute independent work in parallel.</em>
+    <em>{{ $t("synthesis.rows.sequential") }}</em>
   </div>
   <div class="synthesis-row">
     <span>03</span>
     <div class="synthesis-problem">
-      <strong>No coordination layer</strong>
-      <p>Dependencies and ownership stay implicit.</p>
+      <strong>{{ $t("break.cards.coordination.title") }}</strong>
+      <p>{{ $t("break.cards.coordination.desc") }}</p>
     </div>
-    <em>Mayor, Crew and Convoys make ownership and progress visible.</em>
+    <em>{{ $t("synthesis.rows.coordination") }}</em>
   </div>
   <div class="synthesis-row">
     <span>04</span>
     <div class="synthesis-problem">
-      <strong>Merge pressure</strong>
-      <p>Parallel changes become hard to integrate safely.</p>
+      <strong>{{ $t("break.cards.merge.title") }}</strong>
+      <p>{{ $t("break.cards.merge.desc") }}</p>
     </div>
-    <em>Refinery manages convergence instead of leaving integration to chance.</em>
+    <em>{{ $t("synthesis.rows.merge") }}</em>
   </div>
   <div class="synthesis-row">
     <span>05</span>
     <div class="synthesis-problem">
-      <strong>No operational supervision</strong>
-      <p>Stuck work is difficult to observe and recover.</p>
+      <strong>{{ $t("break.cards.supervision.title") }}</strong>
+      <p>{{ $t("break.cards.supervision.desc") }}</p>
     </div>
-    <em>Witness, Deacon and recovery loops keep execution observable.</em>
+    <em>{{ $t("synthesis.rows.supervision") }}</em>
   </div>
 </div>
 
@@ -841,15 +843,15 @@ This closes the conceptual loop with the exact five problems introduced earlier.
 
 ---
 
-# Thank you
+# {{ $t("thanks.heading") }}
 
-## Questions & discussion
+## {{ $t("thanks.subheading") }}
 
 <div class="question-block">
-  <span>Example questions</span>
-  <p>What does it cost to deliver a feature with Gastown?</p>
-  <p>How much control do we have over the models?</p>
-  <p>When should we use the Crew instead of only the Mayor?</p>
+  <span>{{ $t("thanks.examples_label") }}</span>
+  <p>{{ $t("thanks.questions.cost") }}</p>
+  <p>{{ $t("thanks.questions.control") }}</p>
+  <p>{{ $t("thanks.questions.crew") }}</p>
 </div>
 
 <!--

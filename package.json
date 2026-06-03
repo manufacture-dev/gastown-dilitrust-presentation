@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@slidev/cli": "^52.2.0",
+    "slidev-addon-i18nb": "^0.2.6",
     "slidev-theme-the-unnamed": "git+https://github.com/jlrigau/slidev-theme-the-unnamed.git#fix-shiki-browser-editor"
   },
   "devDependencies": {
