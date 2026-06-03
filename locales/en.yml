@@ -1,0 +1,366 @@
+common:
+  why_it_matters: Why it matters
+
+title:
+  heading: Organizing AI-native software delivery with Gastown
+  event: DiliTrust TechDay
+  byline: Jean-Louis Rigau & Emmanuel Sciara
+  date: Thursday, May 21, 2026
+  tags:
+    ai_native: "#AI-native engineering"
+    distributed: "#Distributed delivery"
+    orchestration: "#Agent orchestration"
+    supervised: "#Supervised execution"
+
+speakers:
+  heading: Speakers
+  role: Speaker
+  jlrigau:
+    bio: Engineering and AI-native transformation advisor. Helps organizations modernize platforms, delivery practices, product operating models and agentic workflows.
+    qr_alt: QR code for Jean-Louis Rigau LinkedIn profile
+  emmanuelsciara:
+    bio: Agent Lead and AI-native Engineer. Works on strategy, deployment and coaching of coding agents, with hands-on Claude Code and developer enablement.
+    qr_alt: QR code for Emmanuel Sciara LinkedIn profile
+
+evolution:
+  heading: The 8 stages of AI development practice
+  stages:
+    zero: Zero or near-zero AI
+    ide_assistant: IDE assistant with permissions
+    yolo: IDE agent in YOLO mode
+    wide_ide: Wide agent inside the IDE
+    cli_agent: Single CLI coding agent
+    multi_cli: Multi-agent CLI workflow
+    hand_managed: 10+ agents, hand-managed
+    orchestrator: Building an orchestrator
+  copy_label: Practice shift
+  lede: The shift is from asking an assistant to operating a delivery system.
+  bullets:
+    early: Early stages improve individual flow.
+    middle: Middle stages increase throughput with CLI agents.
+    late: Late stages create a coordination problem.
+    gastown: Gastown appears when hand-management stops scaling.
+  takeaway: AI development evolves from individual assistance to organizational coordination.
+
+creator:
+  photo_caption: "Photo: Bram Cymet, CC BY-NC 2.0"
+  copy_label: From practice to organization
+  lede: Steve Yegge frames the shift from individual AI coding to AI-native software delivery.
+  vibe:
+    desc: Production-grade software with AI coding agents.
+  gastown:
+    desc: An operating model for coordinating many agents around real repositories.
+  beads:
+    desc: A Git-backed work ledger for agentic engineering workflows.
+  cover_caption: "Cover source: IT Revolution / Simon & Schuster"
+
+gastown:
+  heading: "Gastown: a town-shaped delivery system"
+  town:
+    strong: Agent headquarters
+    desc: A separate operating space where orchestration, identity, mail, and work tracking live.
+  mayor:
+    strong: Chief of staff
+    desc: "The front door: absorbs worker noise and turns intent into coordinated work."
+  rigs:
+    strong: Project factories
+    desc: Polecats, Crew, Witness and Refinery operate around real repositories.
+  copy_label: Town as operating model
+  lede: Gastown makes vibe coding operational without pretending the chaos disappears.
+  bullets:
+    identities: Many coding agents become first-class workers with visible identities.
+    beads: Beads provide the Git-backed ledger for work, memory, mail, and provenance.
+    convoys: Convoys track delivery streams; Polecats execute the work.
+    supervision: Witness and Refinery keep the system from turning into merge chaos.
+  takeaway: Gastown turns agentic coding into observable, coordinated software delivery.
+
+demo:
+  heading: Demo application
+  desc: A CRUD Contract Lifecycle Management application used as a realistic delivery target.
+  bullets:
+    stack: "Stack: React/Vite frontend, Express/TypeScript backend, SQLite database."
+    baseline: Gastown works on a forked repository, so the demo starts from a clean baseline.
+    real: "The demo is real: the outcome may differ from the initial plan."
+  image_alt: Agreement Hub initial state
+  flow_label: Demo flow
+  flow_start: "Start the demo loop: open Agreement Hub → show current state → ask the Mayor."
+  flow_next: From here, each Live Signal marks what to observe next.
+  open_app: Open app ↗
+  copy_prompt: Copy prompt
+
+break:
+  heading: Why single-agent workflows break
+  core:
+    label: Single agent
+    strong: Great local assistant
+    desc: One context, one thread of execution, one working branch.
+  cards:
+    context:
+      title: Context saturation
+      desc: Important constraints disappear as the session grows.
+    sequential:
+      title: Sequential execution
+      desc: Throughput is bounded by one worker loop.
+    coordination:
+      title: No coordination layer
+      desc: Dependencies and ownership stay implicit.
+    merge:
+      title: Merge pressure
+      desc: Parallel changes become hard to integrate safely.
+    supervision:
+      title: No operational supervision
+      desc: Stuck work is difficult to observe and recover.
+  panel_label: Problem
+  panel_desc: AI coding works locally, but software delivery is organizational.
+  bullets:
+    context: Context windows do not model dependencies.
+    sequential: Sequential work limits throughput.
+    parallel: Parallel work creates integration pressure.
+    supervision: Supervision becomes a first-class concern.
+  takeaway: Software delivery is organizational. The bottleneck becomes coordination.
+
+organizes:
+  heading: Gastown organizes work, not prompts
+  input:
+    label: Input
+    strong: Human intent
+    desc: Natural language request, incomplete by design.
+  layer:
+    label: Organization layer
+    strong: Gastown structures delivery
+    mayor: plans and coordinates.
+    beads: make work addressable.
+    convoys: track delivery streams.
+    witness_refinery: keep execution observable.
+    polecats: do the work.
+  output:
+    label: Output
+    strong: Observable delivery
+    desc: Status, dependencies, ownership, progress, and merge flow become inspectable.
+  panel_label: Response
+  panel_desc: Gastown turns intent into shared delivery objects.
+  bullets:
+    mayor: Mayor separates planning from execution.
+    beads: Beads and convoys make work addressable and trackable.
+    witness: Witness and Refinery make supervision and convergence visible.
+    polecats: Polecats execute the work.
+  takeaway: Scale comes from shared coordination, not bigger prompts.
+  live_signal: The Mayor turns a high-level request into beads, convoys, assignments, and visible status.
+
+organization:
+  heading: The Organization
+  town:
+    overseer: Human intent and control
+    mayor: Cross-rig coordination
+    deacon: System health
+  rig:
+    definition: A project repository with its own execution environment.
+    crew: Persistent workers
+    polecats: Ephemeral workers
+    witness: Rig supervision
+    refinery: Merge queue
+  panel_desc: Gastown is organized around a town and one or more rigs.
+  bullets:
+    town: The Town coordinates across repositories.
+    rig: Each Rig is attached to a real codebase.
+    workers: Crew members are persistent; Polecats are disposable execution workers.
+    roles: Witness and Refinery are rig-level operating roles.
+  takeaway: Gastown separates coordination, execution, supervision, and integration.
+  live_signal: Identify the rig, the persistent crew, and the disposable workers attached to the repository.
+
+beads:
+  heading: "Beads: work breakdown & dependencies"
+  nodes:
+    foundation:
+      label: Phase 0 — Foundations
+      strong: Schema enrichment · RiskFinding type · LLM wrapper
+    uc5:
+      strong: Clause Library
+      em: Reusable templates
+    uc3:
+      strong: Approval Workflow
+      em: State and history
+    uc1:
+      strong: Clause Generator
+      em: Can save clauses
+    uc2:
+      strong: Risk Reviewer
+      em: Persists findings
+    uc4:
+      label: Use Case 4 — last mile
+      strong: Search / Intelligence
+      em: Uses schema, metadata, and risk findings
+  dependencies:
+    library: Saved generated clauses to library
+    risk: risky / GDPR facets need persisted findings
+  critical_path: Critical path
+  panel_desc: Beads turn a high-level request into executable work with order, ownership, and status.
+  bullets:
+    dependencies: Dependencies expose the critical path.
+    ready: Ready work can be executed immediately.
+    blocked: Blocked work is visible instead of implicit.
+    hooks: Hooks keep workers connected to active assignments.
+  takeaway: Beads expose what can start now, what is blocked, and why.
+  live_signal: Bead creation, ready/blocked status, dependency graph, and current hook.
+
+convoys:
+  heading: "Convoys: delivery streams"
+  steps:
+    step0: Step 0
+    step1: Step 1
+    step2: Step 2
+    step3: Step 3
+  phase:
+    label: 🚚 Phase 0 convoy
+    strong: Foundations
+    em: shared base · unlocks Use Cases 1-5
+  uc5:
+    label: 🚚 Use Case 5 convoy
+    strong: Clause Library
+    em: CRUD stream · reusable clauses
+  uc3:
+    label: 🚚 Use Case 3 convoy
+    strong: Approval Workflow
+    em: state machine · history
+  uc1:
+    label: 🚚 Use Case 1 convoy
+    strong: Clause Generator
+    em: AI stream · saves to library
+  uc2:
+    label: 🚚 Use Case 2 convoy
+    strong: Risk Reviewer
+    em: AI stream · persisted findings
+  uc4:
+    label: 🚚 Use Case 4 convoy
+    strong: Search / Intelligence
+    em: last mile · depends on schema and risk findings
+  panel_desc: Convoys make each use case visible as a delivery stream.
+  bullets:
+    step: Same step number means parallel work.
+    progress: Progress becomes visible across workers.
+    reference: Shared reference across roles.
+  takeaway: Convoys turn the bead graph into observable delivery streams.
+  live_signal: Convoy creation, convoy status, and landing notification.
+
+polecats:
+  heading: "Polecats: parallel execution"
+  assignments:
+    furiosa_1: Foundations
+    furiosa_2: Clause Library
+    furiosa_3: Risk Reviewer
+    nux: Contract Approval Workflow
+    slit_1: Clause Generator
+    slit_2: Search / Intelligence MVP
+  flow:
+    request: One product request
+    beads: Scoped beads
+    workers: Isolated execution workers (Polecats)
+    delivery: Coordinated delivery
+  panel_desc: The Mayor assigns scoped beads to Polecats, each running in its own context and branch.
+  bullets:
+    spawned: Spawned on demand for discrete tasks.
+    isolated: Assignments stay isolated from each other.
+    disappear: Polecats disappear after delivery.
+    parallelism: Parallelism increases throughput, not chaos.
+  takeaway: Polecats make execution scalable by distributing work across isolated contexts.
+  live_signal: Multiple Polecats, branches, commits, and delivery statuses running at the same time.
+
+supervision:
+  heading: Supervision keeps execution operational
+  hq_label: HQ watchdog chain
+  mayor: Coordinates work
+  deacon: Town watchdog · lifecycle · recovery
+  daemon: mechanical heartbeat
+  boot: Checks Deacon health
+  dogs: Deacon helpers
+  rig_label: Rig operational loop
+  crew: Persistent workers
+  witness: Monitors Polecats · detects stuck work · nudges recovery
+  polecats: Execute beads
+  refinery: Merge queue · delivery convergence
+  panel_desc: Gastown supervision is layered, not a single watcher.
+  bullets:
+    daemon: Daemon wakes Boot when health needs checking.
+    deacon: Deacon keeps the town healthy.
+    witness: Witness keeps rig execution moving.
+    refinery: Refinery keeps delivery converging.
+  takeaway: Supervision turns distributed execution into an operational system.
+  live_signal: Deacon health, Witness status, Polecat recovery, Refinery queue, and delivery convergence.
+
+verification:
+  heading: Agreement Hub verification
+  copy_label: Local inspection
+  desc: We inspect the delivered repository by running Agreement Hub locally and comparing it with the starting version.
+  bullets:
+    not_deployed: The app is not deployed during the demo.
+    clone: We clone the complete repository produced by Gastown.
+    run: We run that repository locally, then compare it with the baseline app.
+  question: What will the delivered app reveal?
+  checkpoints:
+    title: Implemented use cases
+    clause_generator: Clause Generator
+    risk_reviewer: Risk Reviewer
+    approval_workflow: Approval Workflow
+    search: Search & Intelligence
+    library: Clause Library
+  flow_label: Verification checkpoint
+  flow_start: The Gastown delivery loop pauses here.
+  flow_next: Now we clone the delivered repository, run Agreement Hub locally, and compare it with the starting application.
+
+formulas:
+  heading: Going further with formulas
+  intro: "A formula turns an orchestration pattern into a repeatable delivery playbook: steps, inputs, gates, parallel work, and artifacts."
+  example_label: Example
+  example_desc: From vague idea to reviewed plan and work ready to become beads.
+  open_link: Open formula on GitHub
+  takeaway: "Formulas make orchestration reusable: the workflow becomes part of the delivery system."
+  steps:
+    idea:
+      label: 01 · You → Crew
+      desc: Describe your idea in natural language; no structure needed.
+    intake:
+      label: 02 · intake
+      desc: Agent structures it into a draft PRD.
+    prd_review:
+      label: 03 · prd-review
+      desc: "6 polecats review PRD in parallel: requirements, gaps, ambiguity, feasibility, scope and stakeholders."
+    human_clarify:
+      label: 04 · human-clarify
+      desc: Agent presents consolidated questions; the human answers before planning continues.
+    generate_plan:
+      label: 05 · generate-plan
+      desc: "6 polecats design the implementation in parallel: API, data, UX, scale, security and integration."
+    prd_align:
+      label: 06 · prd-align 1-3
+      desc: 3 rounds × 2 Polecats align plan with PRD and apply fixes each round.
+    plan_review:
+      label: 07 · plan-review 1-3
+      desc: "3 rounds × 2 Polecats review the plan itself: completeness, sequencing, risk, scope creep, testability and coherence."
+    create_beads:
+      label: 08 · create-beads
+      desc: Agent converts the refined plan into beads with dependencies.
+    verify_beads:
+      label: 09 · verify-beads
+      desc: 3 sequential passes compare plan to beads and fill gaps.
+
+synthesis:
+  heading: What Gastown changed
+  problem_label: Problem
+  problem: Single-agent workflows break when coding becomes delivery.
+  response_label: Gastown response
+  response: Turn delivery into a supervised, distributed operating model.
+  rows:
+    context: Structure work into beads, artifacts, and explicit handoffs.
+    sequential: Use Polecats to execute independent work in parallel.
+    coordination: Mayor, Crew and Convoys make ownership and progress visible.
+    merge: Refinery manages convergence instead of leaving integration to chance.
+    supervision: Witness, Deacon and recovery loops keep execution observable.
+
+thanks:
+  heading: Thank you
+  subheading: Questions & discussion
+  examples_label: Example questions
+  questions:
+    cost: What does it cost to deliver a feature with Gastown?
+    control: How much control do we have over the models?
+    crew: When should we use the Crew instead of only the Mayor?
