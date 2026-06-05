@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url'
 import { parseSync, stringify } from '@slidev/parser'
 
 const DEFAULT_VARIANT = 'full'
+const PROMPTS = new Set(['critical-path'])
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const talksDir = path.join(root, 'talks')
@@ -21,6 +22,10 @@ function readTalks() {
       for (const field of ['id', 'route', 'defaultLocale', 'label', 'date']) {
         if (!talk[field])
           throw new Error(`Missing "${field}" in talks/${file}`)
+      }
+      if (talk.prompt && !PROMPTS.has(talk.prompt)) {
+        const prompts = [...PROMPTS].join(', ')
+        throw new Error(`Invalid "prompt" in talks/${file}: ${talk.prompt}. Expected one of: ${prompts}`)
       }
       return talk
     })
@@ -49,8 +54,12 @@ function variantForTalk(talk) {
   return talk.variant || DEFAULT_VARIANT
 }
 
+function promptForTalk(talk) {
+  return talk.prompt
+}
+
 function envForTalk(talk) {
-  return {
+  const env = {
     ...process.env,
     VITE_TALK_ID: talk.id,
     VITE_TALK_ROUTE: talk.route,
@@ -58,6 +67,10 @@ function envForTalk(talk) {
     VITE_DEFAULT_LOCALE: talk.defaultLocale,
     VITE_TALK_VARIANT: variantForTalk(talk),
   }
+  const prompt = promptForTalk(talk)
+  if (prompt)
+    env.VITE_TALK_PROMPT = prompt
+  return env
 }
 
 function readLocalizedHeading(locale) {

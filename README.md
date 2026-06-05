@@ -158,6 +158,55 @@ Notes:
 - Exports keep their `gastown-<route>.<locale>.<ext>` naming; because `route`
   is unique per talk, the variant is already disambiguated.
 
+## Demo Prompts
+
+The demo slide has one copy button. Each talk chooses which plain-text prompt that
+button copies through the optional `prompt` field in `talks/*.json`.
+
+Available prompts:
+
+- `critical-path`: lightweight prompt focused on the demo critical path.
+
+When `prompt` is omitted, the talk uses the default demo prompt.
+
+Example:
+
+```json
+{
+  "id": "dev_with_ai_live_4",
+  "route": "dev-with-ai-live-4",
+  "variant": "short",
+  "prompt": "critical-path",
+  "defaultLocale": "fr",
+  "label": "Dev With AI Live #4",
+  "date": "2026-06-12"
+}
+```
+
+Prompt files live in `public/prompts`. The default prompt keeps the base filename:
+
+```text
+gastown-demo-prompt.<locale>.txt
+```
+
+Alternative prompts add the prompt name:
+
+```text
+gastown-demo-prompt.<prompt>.<locale>.txt
+```
+
+For every prompt used by a talk, provide both English and French files:
+
+```text
+public/prompts/gastown-demo-prompt.en.txt
+public/prompts/gastown-demo-prompt.fr.txt
+public/prompts/gastown-demo-prompt.critical-path.en.txt
+public/prompts/gastown-demo-prompt.critical-path.fr.txt
+```
+
+Keep prompt files as plain text. The copy button writes the fetched `.txt` content
+directly to the clipboard.
+
 ## GitHub Pages
 
 The slides are published as a static Slidev site through GitHub Actions.
