@@ -58,6 +58,33 @@ function promptForTalk(talk) {
   return talk.prompt
 }
 
+function renderTable(rows) {
+  const widths = rows[0].map((_, columnIndex) =>
+    Math.max(...rows.map(row => row[columnIndex].length)))
+
+  return rows
+    .map(row => row
+      .map((cell, columnIndex) => cell.padEnd(widths[columnIndex]))
+      .join('  ')
+      .trimEnd())
+    .join('\n')
+}
+
+function renderTalkList(talks) {
+  return renderTable([
+    ['Talk', 'Date', 'Locale', 'Slides', 'Prompt', 'Route'],
+    ['----', '----', '------', '------', '------', '-----'],
+    ...talks.map(talk => [
+      talk.label,
+      talk.date,
+      talk.defaultLocale,
+      variantForTalk(talk),
+      promptForTalk(talk) || 'default',
+      talk.route,
+    ]),
+  ])
+}
+
 function envForTalk(talk) {
   const env = {
     ...process.env,
@@ -329,8 +356,7 @@ async function main() {
   const [command, ...args] = ownArgs
 
   if (command === 'list') {
-    for (const talk of readTalks())
-      console.log(`${talk.route}\t${talk.defaultLocale}\t${talk.label}`)
+    console.log(renderTalkList(readTalks()))
     return
   }
 
