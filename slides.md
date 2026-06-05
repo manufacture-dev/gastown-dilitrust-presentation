@@ -718,6 +718,8 @@ The audience must see that Agreement Hub changed because Gastown delivered code.
 -->
 
 ---
+variants: [full]
+---
 
 # {{ $t("formulas.heading") }}
 
