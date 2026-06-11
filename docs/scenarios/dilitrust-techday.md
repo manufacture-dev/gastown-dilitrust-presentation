@@ -1,4 +1,4 @@
-# DiliTrust TechDay Scenario
+# DiliTrust TechDay
 
 Ce document décrit la cinématique complète de la présentation DiliTrust TechDay: les slides portent le récit, Gastown travaille en arrière-plan, et Agreement Hub sert de preuve produit.
 
@@ -143,7 +143,7 @@ La preuve finale n'est pas une belle sortie terminal. La preuve finale est l'ét
 | 43-44 min | 16 | Synthèse | 1 min | - | 1 min | Deck uniquement. Reboucler les cinq problèmes single-agent avec les réponses Gastown. |
 | 44-45 min | 17 | Questions + coût + arrêt | - | 1 min | 1 min | Montrer `gt cost` si disponible, puis arrêter le lab avec `gt estop -r "lab done"` après la capture finale. |
 
-## Préparation avant tournage
+## Préparation avant le talk
 
 Cette partie peut être capturée rapidement au début de la vidéo ou réalisée hors caméra selon le rythme voulu.
 
@@ -156,7 +156,7 @@ taxiway list
 Si le lab doit être recréé:
 
 ```bash
-taxiway up test-demo-15-min-final \
+taxiway up live-dilitrust \
   --type gastown \
   --set version=1.1.0 \
   --set beads-version=1.0.3 \
@@ -188,9 +188,9 @@ Texte oral EN:
 ### 2. Vérifier la santé
 
 ```bash
-taxiway doctor test-demo-15-min-final
-taxiway doctor test-demo-15-min-final --fix
-taxiway doctor test-demo-15-min-final
+taxiway doctor live-dilitrust
+taxiway doctor live-dilitrust --fix
+taxiway doctor live-dilitrust
 ```
 
 Signal attendu:
@@ -210,7 +210,7 @@ Texte oral EN:
 ### 3. Entrer dans Gastown
 
 ```bash
-taxiway shell test-demo-15-min-final
+taxiway shell live-dilitrust
 gt status
 ```
 
