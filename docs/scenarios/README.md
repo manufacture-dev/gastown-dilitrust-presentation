@@ -10,7 +10,8 @@ Each scenario should:
 
 ## Scenarios
 
-- `dilitrust-techday.md`: 45-minute DiliTrust TechDay scenario.
+- `dilitrust-techday.md`: DiliTrust TechDay.
+- `dev-with-ai-live-4.md`: Dev With AI Live #4.
 
 ## Prompt Convention
 
