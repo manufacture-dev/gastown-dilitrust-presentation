@@ -108,6 +108,14 @@ keeps each talk language visible, and links to:
 - the generated PDF;
 - the generated PPTX.
 
+## Talk Scenarios
+
+Scenario runbooks live in [docs/scenarios](docs/scenarios/). Start from the
+[scenarios README](docs/scenarios/README.md), or open a scenario directly:
+
+- [DiliTrust TechDay](docs/scenarios/dilitrust-techday.md)
+- [Dev With AI Live #4](docs/scenarios/dev-with-ai-live-4.md)
+
 ## Talk Variants
 
 A single `slides.md` can produce several **content variants** of the same deck
