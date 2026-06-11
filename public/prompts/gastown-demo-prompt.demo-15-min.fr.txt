@@ -51,6 +51,7 @@ Quand je dis GO, la démonstration Gastown attendue est:
 - au maximum 1 bead de fondation si un prérequis technique minimal est nécessaire;
 - intégration passée par les étapes normales de review, Witness/validation, Refinery et merge queue;
 - aucun push direct sur la branche principale de delivery;
+- aucun commit ne doit inclure les artefacts runtime Gastown ou Claude (`CLAUDE.md`, `.beads/`, `.runtime/`); si ces fichiers apparaissent dans un worktree, exclue-les localement et recommitte proprement avant soumission;
 - beads fermés seulement après intégration et vérification sur la branche principale de delivery.
 
 Donne une mise à jour courte toutes les 3 minutes, ou immédiatement en cas de blocage. Chaque mise à jour doit séparer clairement:
@@ -75,3 +76,5 @@ Le compte rendu final doit être compact mais plus visuel qu'un simple paragraph
 - la preuve de vérification;
 - ce qui a été différé;
 - les risques restants.
+
+Après ce compte rendu final, arrête le reporting de démo. Ne lance pas de nouvelles boucles de statut, de cleanup ou de monitoring visibles, sauf si je le demande explicitement.
