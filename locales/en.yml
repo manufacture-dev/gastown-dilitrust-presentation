@@ -68,6 +68,7 @@ gastown:
     strong: Chief of staff
     desc: "The front door: absorbs worker noise and turns intent into coordinated work."
   rigs:
+    title: Rigs
     strong: Project factories
     desc: Polecats, Crew, Witness and Refinery operate around real repositories.
   copy_label: Town as operating model

@@ -166,7 +166,7 @@ Keep it short: creator, book, why it matters for the model.
       <p>{{ $t("gastown.mayor.desc") }}</p>
     </div>
     <div class="town-node">
-      <span>Rigs</span>
+      <span>{{ $t("gastown.rigs.title") }}</span>
       <strong>{{ $t("gastown.rigs.strong") }}</strong>
       <p>{{ $t("gastown.rigs.desc") }}</p>
     </div>
