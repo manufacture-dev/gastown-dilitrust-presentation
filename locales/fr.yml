@@ -62,9 +62,11 @@ creator:
 gastown:
   heading: "Gastown : un système de delivery urbanisé"
   town:
+    title: Town
     strong: Quartier général agentique
     desc: Un espace opérationnel séparé où vivent orchestration, identité, mail et traçage du travail.
   mayor:
+    title: Mayor
     strong: Coordination
     desc: "C'est le point d'entrée : absorbe le bruit des workers et transforme l'intention en travail coordonné."
   rigs:

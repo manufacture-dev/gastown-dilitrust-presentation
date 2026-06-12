@@ -155,13 +155,13 @@ Keep it short: creator, book, why it matters for the model.
 <div class="gastown-intro">
   <div class="town-map">
     <div class="town-node town-node--main">
-      <span>Town</span>
+      <span>{{ $t("gastown.town.title") }}</span>
       <strong>{{ $t("gastown.town.strong") }}</strong>
       <p>{{ $t("gastown.town.desc") }}</p>
     </div>
     <div class="town-rail"></div>
     <div class="town-node">
-      <span>Mayor</span>
+      <span>{{ $t("gastown.mayor.title") }}</span>
       <strong>{{ $t("gastown.mayor.strong") }}</strong>
       <p>{{ $t("gastown.mayor.desc") }}</p>
     </div>
