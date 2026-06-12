@@ -83,18 +83,18 @@ Le talk utilise la variante `short`: la slide `Formulas` n'est pas jouée. La sy
 
 | Temps | Slides | Qui | Séquence | Deck | Démo | Preuve à l'écran |
 |---:|---:|---|---|---:|---:|---|
-| 0-2 min | 1-2 | Jean-Louis puis Emmanuel | Ouverture + intervenants | 2 min | - | Jean-Louis ouvre et se présente, puis passe la main à Emmanuel qui se présente. |
-| 2-6 min | 3-5 | Emmanuel, puis Jean-Louis au takeaway | Évolution de la pratique vers Gastown | 4 min | - | Emmanuel présente les 8 étapes, Steve Yegge, puis Gastown. Jean-Louis reprend au takeaway et fait le lien vers la démo. |
-| 6-8 min | 6 | Jean-Louis | Application de démo + prompt | 1 min | 1 min | Slide puis app. Copier le prompt depuis le deck, `gt mayor attach`, coller au Mayor. |
-| 8-10 min | 7 | Emmanuel | Pourquoi le single-agent casse | 2 min | - | Deck pendant que le Mayor inspecte. Installer les cinq limites. |
-| 10-13 min | 8 | Emmanuel, puis Jean-Louis au `LiveSignal` | Gastown organise le travail | 1 min | 2 min | Emmanuel présente le modèle. Jean-Louis reprend au `LiveSignal`: plan Mayor, recadrage à 2 incréments, `GO`, premiers beads/convoy. |
-| 13-15 min | 9 | Jean-Louis | `LiveSignal`: organisation | 1 min | 1 min | `gt status`. Rig, crew, Mayor, Witness, Refinery. |
-| 15-18 min | 10 | Jean-Louis | `LiveSignal`: beads | 1 min | 2 min | `bd list --all --flat`, `bd ready`. Expliquer que tous les use cases du slide ne seront pas livrés. |
+| 0-1 min | 1-2 | Jean-Louis puis Emmanuel | Ouverture + intervenants | 1 min | - | Jean-Louis ouvre et se présente, puis passe la main à Emmanuel qui se présente. |
+| 1-5 min | 3-5 | Emmanuel, puis Jean-Louis au takeaway | Évolution de la pratique vers Gastown | 4 min | - | Emmanuel présente les 8 étapes, Steve Yegge, puis Gastown. Jean-Louis reprend au takeaway et fait le lien vers la démo. |
+| 5-10 min | 6 | Jean-Louis | Application de démo + prompt | 1 min | 4 min | Montrer l'app, copier le prompt depuis le deck, `gt mayor attach`, coller au Mayor, laisser le plan arriver. |
+| 10-11 min | 7 | Emmanuel | Pourquoi le single-agent casse | 1 min | - | Deck pendant que le Mayor inspecte. Installer les cinq limites sans développer. |
+| 11-14 min | 8 | Emmanuel, puis Jean-Louis au `LiveSignal` | Gastown organise le travail | 1 min | 2 min | Emmanuel présente le modèle. Jean-Louis reprend au `LiveSignal`: plan Mayor, recadrage à 2 incréments, `GO`, premiers beads/convoy. |
+| 14-16 min | 9 | Jean-Louis | `LiveSignal`: organisation | 1 min | 1 min | `gt status`. Rig, crew, Mayor, Witness, Refinery. |
+| 16-18 min | 10 | Jean-Louis | `LiveSignal`: beads | 1 min | 1 min | `bd list --all --flat`, `bd ready`. Expliquer que tous les use cases du slide ne seront pas livrés. |
 | 18-20 min | 11 | Jean-Louis | `LiveSignal`: convoys | 1 min | 1 min | `gt convoy list --all`, `gt convoy status`. Progression des deux incréments. |
 | 20-22 min | 12 | Jean-Louis | `LiveSignal`: Polecats | 1 min | 1 min | `gt status`, branches/workers. Parallélisme limité, pas tour de terminaux. |
-| 22-25 min | 13 | Emmanuel, puis Jean-Louis au `LiveSignal` | Supervision Gastown | 1 min | 2 min | Emmanuel présente la supervision. Jean-Louis reprend au `LiveSignal`: Deacon, Witness, Refinery et convergence côté terminal. |
-| 25-27 min | 14 | Jean-Louis | Vérification Agreement Hub | 1 min | 1 min | App. Montrer uniquement les incréments réellement livrés. |
-| 27-29 min | 15 | Emmanuel + Jean-Louis | Synthèse `Ce que Gastown change` | 2 min | - | Emmanuel prend chaque problème, Jean-Louis donne la réponse Gastown. |
+| 22-24 min | 13 | Emmanuel, puis Jean-Louis au `LiveSignal` | Supervision Gastown | 1 min | 1 min | Emmanuel présente la supervision. Jean-Louis reprend au `LiveSignal`: Deacon, Witness, Refinery et convergence côté terminal. |
+| 24-28 min | 14 | Jean-Louis | Vérification Agreement Hub | 1 min | 3 min | App. Montrer uniquement les incréments réellement livrés, avec assez de temps pour vérifier devant le public. |
+| 28-29 min | 15 | Emmanuel + Jean-Louis | Synthèse `Ce que Gastown change` | 1 min | - | Emmanuel prend chaque problème, Jean-Louis donne la réponse Gastown. |
 | 29-30 min | 16 | Les deux | Questions + coût | 1 min | - | Slide de remerciement/questions. Montrer très rapidement le coût dans Langfuse si le rythme le permet, sans analyser les traces. |
 
 ## Préparation avant le talk
@@ -189,7 +189,7 @@ Texte oral:
 
 ## Scène 1 - Slide 1: ouverture
 
-Temps cible: 45 secondes.
+Temps cible: 30 secondes.
 
 Présentateur: Jean-Louis.
 
@@ -207,7 +207,7 @@ Texte oral:
 
 ## Scène 2 - Slide 2: intervenants
 
-Temps cible: 45 secondes.
+Temps cible: 30 secondes.
 
 Présentateurs: Jean-Louis puis Emmanuel.
 
@@ -276,7 +276,7 @@ Reprise Jean-Louis au takeaway:
 
 ## Scène 6 - Slide 6: application de démo
 
-Temps cible: 2 minutes.
+Temps cible: 5 minutes.
 
 Présentateur: Jean-Louis.
 
@@ -311,7 +311,7 @@ Pendant que le Mayor inspecte:
 
 ## Scène 7 - Slide 7: pourquoi les workflows single-agent cassent
 
-Temps cible: 2 minutes.
+Temps cible: 1 minute.
 
 Présentateur: Emmanuel.
 
@@ -410,7 +410,7 @@ Texte oral:
 
 ## Scène 10 - Slide 10: Beads
 
-Temps cible: 3 minutes.
+Temps cible: 2 minutes.
 
 Présentateur: Jean-Louis.
 
@@ -485,7 +485,7 @@ Si une merge queue est visible:
 
 ## Scène 13 - Slide 13: supervision Gastown
 
-Temps cible: 3 minutes.
+Temps cible: 2 minutes.
 
 Présentateurs: Emmanuel pour la slide supervision, puis Jean-Louis à partir du `LiveSignal`.
 
@@ -524,7 +524,7 @@ Texte oral Jean-Louis:
 
 ## Scène 14 - Slide 14: vérification Agreement Hub
 
-Temps cible: 2 minutes.
+Temps cible: 4 minutes.
 
 Présentateur: Jean-Louis.
 
@@ -563,7 +563,7 @@ Pour `AI Risk Reviewer mock/offline`:
 
 ## Scène 15 - Slide 15: synthèse
 
-Temps cible: 2 minutes.
+Temps cible: 1 minute.
 
 Présentateurs: Emmanuel lit chaque problème, Jean-Louis donne la réponse Gastown.
 
