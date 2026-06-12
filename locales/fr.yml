@@ -39,11 +39,11 @@ evolution:
     hand_managed: 10+ agents, pilotés à la main
     orchestrator: Construire un orchestrateur
   copy_label: Changement de pratique
-  lede: Le focus se déplace de la requète à un assistant vers la gestion d'un système de delivery.
+  lede: D'une requête à un assistant vers la gestion d'un système de delivery.
   bullets:
     early: Les premières étapes améliorent le flux individuel.
     middle: Les étapes intermédiaires augmentent le débit (CLI).
-    late: Les dernières étapes amènent un enjeu de coordination.
+    late: Les dernières étapes créent un enjeu de coordination.
     gastown: Gastown entre en jeu quand le pilotage manuel n'est plus gérable.
   takeaway: Le développement avec l'IA évolue de l'assistance individuelle vers la coordination organisationnelle.
 
